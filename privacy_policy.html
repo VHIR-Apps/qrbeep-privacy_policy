@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - QR Beep Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #050505;
+            --card: #0F0F0F;
+            --border: #1A1A1A;
+            --gold: #FFD700;
+            --cyan: #00D9FF;
+            --text: #E0E0E0;
+            --muted: #888888;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 60px 20px;
+            margin-bottom: 50px;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.05) 0%, rgba(0, 217, 255, 0.03) 100%);
+            border-radius: 24px;
+            border: 1px solid var(--border);
+        }
+
+        .header-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            color: var(--gold);
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .header .app-name {
+            color: var(--cyan);
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+
+        .header .last-updated {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* Sections */
+        .section {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+            transition: border-color 0.3s;
+        }
+
+        .section:hover {
+            border-color: rgba(255, 215, 0, 0.15);
+        }
+
+        .section-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background: rgba(255, 215, 0, 0.1);
+            color: var(--gold);
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 800;
+            margin-right: 12px;
+        }
+
+        .section h2 {
+            color: var(--gold);
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section h3 {
+            color: var(--cyan);
+            font-size: 16px;
+            font-weight: 600;
+            margin: 20px 0 10px;
+        }
+
+        .section p {
+            color: var(--text);
+            font-size: 15px;
+            margin-bottom: 14px;
+            line-height: 1.8;
+        }
+
+        .section ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 16px;
+        }
+
+        .section ul li {
+            padding: 8px 0 8px 28px;
+            position: relative;
+            color: var(--text);
+            font-size: 15px;
+        }
+
+        .section ul li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--cyan);
+            font-size: 12px;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: rgba(0, 217, 255, 0.05);
+            border: 1px solid rgba(0, 217, 255, 0.15);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 16px 0;
+        }
+
+        .highlight-box.warning {
+            background: rgba(255, 215, 0, 0.05);
+            border-color: rgba(255, 215, 0, 0.15);
+        }
+
+        .highlight-box.important {
+            background: rgba(255, 23, 68, 0.05);
+            border-color: rgba(255, 23, 68, 0.15);
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+
+        /* Table */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .data-table th {
+            background: rgba(255, 215, 0, 0.08);
+            color: var(--gold);
+            padding: 14px 16px;
+            text-align: left;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .data-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+            font-size: 14px;
+            color: var(--text);
+        }
+
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .data-table tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .badge-local {
+            background: rgba(0, 230, 118, 0.15);
+            color: #00E676;
+        }
+
+        .badge-cloud {
+            background: rgba(0, 217, 255, 0.15);
+            color: var(--cyan);
+        }
+
+        .badge-none {
+            background: rgba(255, 215, 0, 0.15);
+            color: var(--gold);
+        }
+
+        /* Contact */
+        .contact-card {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.08) 0%, rgba(0, 217, 255, 0.05) 100%);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .contact-card h2 {
+            color: var(--gold);
+            justify-content: center;
+        }
+
+        .contact-email {
+            display: inline-block;
+            padding: 14px 32px;
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            border-radius: 12px;
+            color: var(--cyan);
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            margin-top: 16px;
+            transition: all 0.3s;
+        }
+
+        .contact-email:hover {
+            background: rgba(0, 217, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .footer .brand {
+            color: var(--gold);
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 16px 60px;
+            }
+
+            .header {
+                padding: 40px 20px;
+            }
+
+            .header h1 {
+                font-size: 28px;
+            }
+
+            .section {
+                padding: 24px 20px;
+            }
+
+            .section h2 {
+                font-size: 18px;
+            }
+
+            .data-table {
+                font-size: 13px;
+            }
+
+            .data-table th,
+            .data-table td {
+                padding: 10px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="header-icon">🛡️</div>
+        <div class="app-name">QR BEEP PRO</div>
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Last Updated: January 2025 &nbsp;|&nbsp; Version 2.0</p>
+    </div>
+
+    <!-- 1. INTRODUCTION -->
+    <div class="section">
+        <h2><span class="section-number">1</span> Introduction</h2>
+        <p>Welcome to <strong>QR Beep Pro</strong> ("App"), developed and operated by <strong>VHIR</strong> ("we", "us", "our"). This Privacy Policy explains how we collect, use, store, and protect your information when you use our mobile application.</p>
+        <p>By downloading, installing, or using QR Beep Pro, you agree to the terms described in this Privacy Policy. If you do not agree with any part of this policy, please do not use the App.</p>
+        <div class="highlight-box">
+            <p>🔒 <strong>Our Core Promise:</strong> QR Beep Pro is designed with privacy-first architecture. We do NOT sell your personal data to third parties, and most of your data stays entirely on your device.</p>
+        </div>
+    </div>
+
+    <!-- 2. INFORMATION WE COLLECT -->
+    <div class="section">
+        <h2><span class="section-number">2</span> Information We Collect</h2>
+        
+        <h3>2.1 Information Stored Locally (On Your Device)</h3>
+        <p>The following data is stored <strong>only on your device</strong> and is never transmitted to our servers:</p>
+        <ul>
+            <li>QR codes and barcodes you scan</li>
+            <li>QR codes you generate</li>
+            <li>Scan history and timestamps</li>
+            <li>Items saved in the Secure Vault</li>
+            <li>App preferences and settings</li>
+            <li>Custom logos uploaded for QR generation</li>
+        </ul>
+
+        <h3>2.2 Information Processed Through Firebase</h3>
+        <p>We use Google Firebase for specific features. The following may be processed through Firebase servers:</p>
+        <ul>
+            <li>Enterprise VIP login credentials (email and encrypted password)</li>
+            <li>Admin panel configuration data</li>
+            <li>Anonymous usage analytics (via Firebase Analytics)</li>
+            <li>App crash reports for debugging purposes</li>
+        </ul>
+
+        <h3>2.3 Information Collected by Third-Party Services</h3>
+        <p>Our third-party advertising partner (Unity Ads) may collect:</p>
+        <ul>
+            <li>Device identifier (advertising ID)</li>
+            <li>Device type and operating system version</li>
+            <li>General location (country/region level, not precise)</li>
+            <li>Ad interaction data (views, clicks)</li>
+        </ul>
+
+        <h3>2.4 Data Overview Table</h3>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Data Type</th>
+                    <th>Storage</th>
+                    <th>Shared?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Scan History</td>
+                    <td><span class="badge badge-local">Local Only</span></td>
+                    <td>Never</td>
+                </tr>
+                <tr>
+                    <td>Generated QR Codes</td>
+                    <td><span class="badge badge-local">Local Only</span></td>
+                    <td>Never</td>
+                </tr>
+                <tr>
+                    <td>Vault Items</td>
+                    <td><span class="badge badge-local">Local Only</span></td>
+                    <td>Never</td>
+                </tr>
+                <tr>
+                    <td>App Preferences</td>
+                    <td><span class="badge badge-local">Local Only</span></td>
+                    <td>Never</td>
+                </tr>
+                <tr>
+                    <td>VIP Login Data</td>
+                    <td><span class="badge badge-cloud">Firebase</span></td>
+                    <td>Encrypted</td>
+                </tr>
+                <tr>
+                    <td>Crash Reports</td>
+                    <td><span class="badge badge-cloud">Firebase</span></td>
+                    <td>Anonymous</td>
+                </tr>
+                <tr>
+                    <td>Ad Interaction</td>
+                    <td><span class="badge badge-none">Third Party</span></td>
+                    <td>Unity Ads</td>
+                </tr>
+                <tr>
+                    <td>Purchase History</td>
+                    <td><span class="badge badge-cloud">Google Play</span></td>
+                    <td>Google</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 3. HOW WE USE YOUR INFORMATION -->
+    <div class="section">
+        <h2><span class="section-number">3</span> How We Use Your Information</h2>
+        <p>We use the collected information for the following purposes:</p>
+        <ul>
+            <li>To provide core QR scanning and generation functionality</li>
+            <li>To maintain your scan history and preferences</li>
+            <li>To process in-app purchases and subscription management</li>
+            <li>To display relevant advertisements (free users only)</li>
+            <li>To verify Enterprise VIP license credentials</li>
+            <li>To improve app performance and fix bugs</li>
+            <li>To send important app notifications (with your consent)</li>
+            <li>To manage referral codes and promotional rewards</li>
+        </ul>
+        <div class="highlight-box warning">
+            <p>⚡ <strong>Important:</strong> We do NOT use your scan data, QR content, or vault items for advertising, marketing, profiling, or any purpose other than providing the service to you.</p>
+        </div>
+    </div>
+
+    <!-- 4. CAMERA & PERMISSIONS -->
+    <div class="section">
+        <h2><span class="section-number">4</span> Camera & Device Permissions</h2>
+        <p>QR Beep Pro requires the following device permissions:</p>
+        
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Permission</th>
+                    <th>Purpose</th>
+                    <th>Required?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>📷 Camera</td>
+                    <td>Scanning QR codes and barcodes in real-time</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>📁 Storage/Gallery</td>
+                    <td>Saving generated QR codes and scanning from gallery</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>🔐 Biometric</td>
+                    <td>Securing the Vault with fingerprint/face authentication</td>
+                    <td>Optional</td>
+                </tr>
+                <tr>
+                    <td>🔦 Flashlight</td>
+                    <td>Illumination during scanning in dark environments</td>
+                    <td>Optional</td>
+                </tr>
+                <tr>
+                    <td>📶 Internet</td>
+                    <td>Ads, Firebase sync, license verification, purchases</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>📳 Vibration</td>
+                    <td>Haptic feedback on successful scan</td>
+                    <td>Optional</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>Camera images are processed <strong>entirely on your device</strong> in real-time. We do not capture, store, transmit, or analyze camera images beyond the QR/barcode decoding process.</p>
+    </div>
+
+    <!-- 5. DATA SECURITY -->
+    <div class="section">
+        <h2><span class="section-number">5</span> Data Security</h2>
+        <p>We implement the following security measures to protect your data:</p>
+        <ul>
+            <li>All local data is stored using encrypted Hive database on your device</li>
+            <li>Vault items are protected with device-level biometric authentication</li>
+            <li>Firebase communications use industry-standard SSL/TLS encryption</li>
+            <li>VIP credentials are stored in secure Firestore with access controls</li>
+            <li>We do not store any passwords in plain text</li>
+            <li>Auto-clipboard clearing is available for sensitive scanned content</li>
+            <li>Secure session mode auto-locks after period of inactivity</li>
+        </ul>
+        <div class="highlight-box important">
+            <p>🛡️ <strong>AI Phishing Shield:</strong> Our AI-powered security feature analyzes scanned URLs locally on your device to detect potential phishing threats. No URL data is sent to external servers for this analysis.</p>
+        </div>
+    </div>
+
+    <!-- 6. THIRD-PARTY SERVICES -->
+    <div class="section">
+        <h2><span class="section-number">6</span> Third-Party Services</h2>
+        <p>QR Beep Pro integrates with the following third-party services:</p>
+        
+        <h3>6.1 Google Firebase</h3>
+        <p>Used for app configuration, analytics, crash reporting, and enterprise authentication. Firebase is governed by <a href="https://policies.google.com/privacy" style="color: var(--cyan);">Google's Privacy Policy</a>.</p>
+        
+        <h3>6.2 Unity Ads</h3>
+        <p>Used to display advertisements to free-tier users. Unity Ads may collect device information and advertising identifiers. See <a href="https://unity.com/legal/privacy-policy" style="color: var(--cyan);">Unity's Privacy Policy</a>.</p>
+        
+        <h3>6.3 Google Play Billing</h3>
+        <p>Used to process in-app purchases and subscriptions. Payment information is handled entirely by Google Play and is never accessible to us. See <a href="https://policies.google.com/privacy" style="color: var(--cyan);">Google's Privacy Policy</a>.</p>
+        
+        <h3>6.4 Google Play Store</h3>
+        <p>The App is distributed through Google Play Store, which may collect installation and usage data as per Google's policies.</p>
+    </div>
+
+    <!-- 7. ADVERTISING -->
+    <div class="section">
+        <h2><span class="section-number">7</span> Advertising</h2>
+        <p>QR Beep Pro displays advertisements to users who have not purchased a Pro subscription. Our advertising is powered by <strong>Unity Ads</strong>.</p>
+        <ul>
+            <li><strong>Ad Types:</strong> Banner ads, interstitial (full-screen) ads, and rewarded video ads</li>
+            <li><strong>Pro Users:</strong> All advertisements are completely removed for Pro subscribers</li>
+            <li><strong>Ad Data:</strong> Unity Ads may collect device identifiers and interaction data</li>
+            <li><strong>Ad Sound:</strong> Can be muted through app settings or admin configuration</li>
+            <li><strong>Ad Frequency:</strong> Controlled remotely through our admin panel</li>
+        </ul>
+        <p>You may opt out of personalized advertising through your device's advertising settings:</p>
+        <ul>
+            <li><strong>Android:</strong> Settings → Privacy → Ads → Delete Advertising ID</li>
+        </ul>
+    </div>
+
+    <!-- 8. SUBSCRIPTIONS & PURCHASES -->
+    <div class="section">
+        <h2><span class="section-number">8</span> Subscriptions & Purchases</h2>
+        <p>QR Beep Pro offers the following subscription plans:</p>
+        <ul>
+            <li><strong>Weekly Plan</strong> — Auto-renewable weekly subscription</li>
+            <li><strong>Monthly Plan</strong> — Auto-renewable monthly subscription</li>
+            <li><strong>Yearly Plan</strong> — Auto-renewable yearly subscription</li>
+        </ul>
+        <p>All purchases are processed through <strong>Google Play Store</strong>. We do not have access to your payment card details, bank information, or billing address.</p>
+        <p>Subscription management, cancellation, and refunds are handled through your Google Play account settings.</p>
+    </div>
+
+    <!-- 9. CHILDREN'S PRIVACY -->
+    <div class="section">
+        <h2><span class="section-number">9</span> Children's Privacy</h2>
+        <p>QR Beep Pro is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13 years of age.</p>
+        <p>If you believe that a child under 13 has provided personal information through our App, please contact us immediately at <strong>vhirsupport@gmail.com</strong>, and we will take steps to delete such information.</p>
+    </div>
+
+    <!-- 10. DATA RETENTION -->
+    <div class="section">
+        <h2><span class="section-number">10</span> Data Retention & Deletion</h2>
+        <p>Since most data is stored locally on your device:</p>
+        <ul>
+            <li><strong>Scan History:</strong> Retained until you manually delete it or clear the app cache</li>
+            <li><strong>Vault Items:</strong> Retained until you manually remove them</li>
+            <li><strong>App Preferences:</strong> Retained until you reset settings or uninstall the app</li>
+            <li><strong>Firebase Data:</strong> VIP credentials retained until license expiry or manual deletion</li>
+            <li><strong>Analytics Data:</strong> Automatically anonymized and aggregated by Firebase</li>
+        </ul>
+        <p><strong>To delete all your data:</strong> Uninstall QR Beep Pro from your device, or use the "Reset Settings" and "Clear Cache" options in the app settings.</p>
+    </div>
+
+    <!-- 11. YOUR RIGHTS -->
+    <div class="section">
+        <h2><span class="section-number">11</span> Your Rights</h2>
+        <p>You have the following rights regarding your data:</p>
+        <ul>
+            <li><strong>Access:</strong> You can view all your data within the app (history, vault, settings)</li>
+            <li><strong>Deletion:</strong> You can delete your scan history, vault items, and cache at any time</li>
+            <li><strong>Portability:</strong> You can share or export your QR codes from the app</li>
+            <li><strong>Opt-out:</strong> You can disable analytics, sounds, haptic feedback, and other features</li>
+            <li><strong>Ad Preferences:</strong> You can upgrade to Pro to remove all advertisements</li>
+            <li><strong>Account Deletion:</strong> VIP users can request account deletion via email</li>
+        </ul>
+    </div>
+
+    <!-- 12. CHANGES TO PRIVACY POLICY -->
+    <div class="section">
+        <h2><span class="section-number">12</span> Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. When we make significant changes:</p>
+        <ul>
+            <li>We will update the "Last Updated" date at the top of this policy</li>
+            <li>We may notify you through an in-app notification</li>
+            <li>Continued use of the App after changes constitutes acceptance of the updated policy</li>
+        </ul>
+        <p>We recommend reviewing this Privacy Policy periodically for any changes.</p>
+    </div>
+
+    <!-- 13. CONTACT -->
+    <div class="contact-card">
+        <h2><span class="section-number">📧</span> Contact Us</h2>
+        <p style="color: var(--muted); margin: 16px 0;">If you have any questions, concerns, or requests regarding this Privacy Policy or your data, please contact us:</p>
+        <a href="mailto:vhirsupport@gmail.com" class="contact-email">vhirsupport@gmail.com</a>
+        <p style="color: var(--muted); margin-top: 20px; font-size: 14px;">
+            <strong>Developer:</strong> VHIR<br>
+            <strong>App:</strong> QR Beep Pro<br>
+            <strong>Package:</strong> com.qr.beep.qrbeep
+        </p>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <p>© 2025 <span class="brand">VHIR</span> — All Rights Reserved</p>
+        <p style="margin-top: 8px;">QR Beep Pro — The Ultimate Scanner Engine</p>
+    </div>
+
+</div>
+
+</body>
+</html>
